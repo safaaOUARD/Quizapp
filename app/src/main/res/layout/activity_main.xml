@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_main.xml – Écran de connexion avec Avatar + message vocal
+    AJOUTS :
+      - ImageView avatar (ic_avatar) centré en haut
+      - TextView tvWelcome : message de bienvenue sous l'avatar
+      - Le vocal se lance automatiquement au démarrage (géré dans MainActivity.java)
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="30dp"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- ══════════════════════════════════════════════
+         AVATAR (NOUVEAU)
+         ══════════════════════════════════════════════ -->
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_avatar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Avatar" />
+
+    <!-- Message de bienvenue vocal (NOUVEAU) -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎙️ Bienvenue dans Quiz Auto !"
+        android:textSize="14sp"
+        android:textColor="#1A237E"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <!-- ══════════════════════════════════════════════
+         LOGO (conservé)
+         ══════════════════════════════════════════════ -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:contentDescription="Logo" />
+
+    <!-- Titre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Auto"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Sous-titre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connectez-vous pour commencer"
+        android:textSize="13sp"
+        android:textColor="#757575"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="28dp" />
+
+    <!-- Champ Email -->
+    <EditText
+        android:id="@+id/etMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/ic_baseline_mail_24"
+        android:drawablePadding="10dp"
+        android:padding="14dp"
+        android:background="@drawable/bg_edittext"
+        android:layout_marginBottom="14dp"
+        android:textSize="15sp" />
+
+    <!-- Champ Mot de passe -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:padding="14dp"
+        android:background="@drawable/bg_edittext"
+        android:layout_marginBottom="24dp"
+        android:textSize="15sp" />
+
+    <!-- Bouton Connexion -->
+    <Button
+        android:id="@+id/bLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SE CONNECTER"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#1A237E"
+        android:textColor="#FFFFFF"
+        android:padding="14dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Lien inscription -->
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pas encore inscrit ? Cliquez ici"
+        android:textSize="14sp"
+        android:textColor="#1565C0"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+    <!-- Bouton Dark Mode -->
+    <Switch
+        android:id="@+id/switchDarkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌙 Mode nuit"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    FICHIER : res/drawable/ic_avatar.xml
+    Avatar simple : cercle coloré + silhouette personne blanche
+    À placer dans : app/src/main/res/drawable/ic_avatar.xml
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Cercle de fond bleu -->
+    <path
+        android:fillColor="#1A237E"
+        android:pathData="M48,48m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0" />
+
+    <!-- Tête (cercle blanc) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,38m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0" />
+
+    <!-- Corps (épaules blanches) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,55c-13,0 -24,6.5 -24,14.5v2.5h48v-2.5c0,-8 -11,-14.5 -24,-14.5z" />
+
+</vector>

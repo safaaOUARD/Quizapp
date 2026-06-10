@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Paramètres"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Dark Mode -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌙 Mode nuit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:layout_marginBottom="10dp" />
+
+        <Switch
+            android:id="@+id/switchDarkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activer le mode nuit"
+            android:textSize="15sp"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Langue -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌍 Langue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:layout_marginBottom="10dp" />
+
+        <RadioGroup
+            android:id="@+id/rgLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <RadioButton
+                android:id="@+id/rbFrench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🇫🇷 Français"
+                android:textSize="15sp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🇬🇧 English"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rbArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🇲🇦 العربية"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+        <!-- Bouton Sauvegarder -->
+        <Button
+            android:id="@+id/bSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAUVEGARDER"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:padding="14dp" />
+
+    </LinearLayout>
+</ScrollView>

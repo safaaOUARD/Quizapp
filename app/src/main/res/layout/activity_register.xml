@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_register.xml – Écran d'inscription
+    Basé sur le layout original du prof, amélioré avec :
+      - ScrollView pour éviter les problèmes sur petits écrans
+      - drawableStart à la place de drawableLeft (compatibilité RTL)
+      - Champ Nom conservé (présent dans le code du prof)
+      - Espacement uniforme entre champs
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="30dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logoo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="Logo" />
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Créer un compte"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Sous-titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remplissez tous les champs"
+            android:textSize="13sp"
+            android:textColor="#757575"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Champ Nom -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom complet"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:padding="14dp"
+            android:background="@drawable/bg_edittext"
+            android:layout_marginBottom="14dp"
+            android:textSize="15sp" />
+
+        <!-- Champ Email (obligatoire) -->
+        <EditText
+            android:id="@+id/etMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email *"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/ic_baseline_mail_24"
+            android:drawablePadding="10dp"
+            android:padding="14dp"
+            android:background="@drawable/bg_edittext"
+            android:layout_marginBottom="14dp"
+            android:textSize="15sp" />
+
+        <!-- Champ Mot de passe (obligatoire) -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mot de passe * (min. 6 caractères)"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:padding="14dp"
+            android:background="@drawable/bg_edittext"
+            android:layout_marginBottom="14dp"
+            android:textSize="15sp" />
+
+        <!-- Confirmation mot de passe -->
+        <EditText
+            android:id="@+id/etPassword1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmer le mot de passe"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:padding="14dp"
+            android:background="@drawable/bg_edittext"
+            android:layout_marginBottom="28dp"
+            android:textSize="15sp" />
+
+        <!-- Bouton S'inscrire -->
+        <Button
+            android:id="@+id/bRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="S'INSCRIRE"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:padding="14dp" />
+
+        <!-- Note champs obligatoires -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* Champs obligatoires"
+            android:textSize="12sp"
+            android:textColor="#9E9E9E"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+</ScrollView>

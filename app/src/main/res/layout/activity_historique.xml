@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Barre du haut avec titre + bouton Dark Mode -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="#1A237E">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📊 Historique des scores"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <Switch
+            android:id="@+id/switchDarkModeHistorique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌙"
+            android:textColor="#FFFFFF"
+            android:thumbTint="#FFFFFF"
+            android:trackTint="#90CAF9" />
+
+    </LinearLayout>
+
+    <!-- Liste des scores -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/containerHistorique"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <!-- Bouton Quitter l'historique -->
+    <Button
+        android:id="@+id/bQuitterHistorique"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🚪 Quitter l'historique"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#757575"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_margin="16dp" />
+
+</LinearLayout>

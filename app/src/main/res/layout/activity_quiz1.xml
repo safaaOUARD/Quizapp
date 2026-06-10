@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_quiz1.xml – "À cette intersection, je laisse la priorité à droite ?" -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Quiz1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="20dp">
+
+        <!-- En-tête : progression + timer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Question 1 / 5"
+                android:textSize="14sp"
+                android:textColor="#616161"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱ 30s"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#424242"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
+
+        <!-- Barre de progression des questions -->
+        <ProgressBar
+            android:id="@+id/pbQuestions"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:max="5"
+            android:progress="0"
+            android:progressTint="#1A237E"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quiz 1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Image de la question -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/q1"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Intersection" />
+
+        <!-- Texte de la question -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="À cette intersection, je laisse la priorité à droite :"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Réponses -->
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oui"
+                android:textSize="16sp"
+                android:padding="14dp"
+                android:layout_marginBottom="10dp"
+                android:buttonTint="#1A237E" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Non"
+                android:textSize="16sp"
+                android:padding="14dp"
+                android:buttonTint="#1A237E" />
+
+        </RadioGroup>
+
+        <!-- Bouton -->
+        <Button
+            android:id="@+id/bNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VALIDER"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Logo bas de page -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logoo"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Logo" />
+
+    </LinearLayout>
+</ScrollView>

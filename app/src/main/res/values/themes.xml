@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Thème principal qui supporte Dark Mode -->
+    <style name="Theme.Quizapp_ouard"
+        parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <!-- Thème de base (conservé) -->
+    <style name="Base.Theme.Quizapp_ouard"
+        parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+</resources>

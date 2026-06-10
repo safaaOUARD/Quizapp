@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="28dp"
+    android:background="#F5F5F5"
+    tools:context=".Score">
+
+    <!-- Logo -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logoo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Logo" />
+
+    <!-- Titre résultats -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Votre score est :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#424242"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Score en % -->
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 %"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Barre de progression -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#1565C0"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Message personnalisé -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#424242"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.3"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Espace flexible -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Rangée 1 : Try Again + Mode Bonus -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/bTry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🔄 Try Again"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:padding="14dp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/bBonus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🎯 Mode Bonus"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1D9E75"
+            android:textColor="#FFFFFF"
+            android:padding="14dp"
+            android:layout_marginStart="6dp" />
+
+    </LinearLayout>
+
+    <!-- Rangée 2 : Quitter -->
+    <Button
+        android:id="@+id/bLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🚪 Quitter"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#757575"
+        android:textColor="#FFFFFF"
+        android:padding="14dp" />
+    <Button
+        android:id="@+id/bHistorique"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📊 Voir l'historique"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#5C6BC0"
+        android:textColor="#FFFFFF"
+        android:padding="14dp"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
